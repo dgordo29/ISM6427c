@@ -367,7 +367,7 @@
     var stats = [
       ['Feels like', r(c.apparent_temperature) + deg],
       ['Humidity', r(c.relative_humidity_2m) + '%'],
-      ['Wind', r(c.wind_speed_10m) + ' ' + u.wind_speed_10m + ' ' + compass(c.wind_direction_10m)],
+      ['Wind', r(c.wind_speed_10m) + ' ' + (state.unit === 'fahrenheit' ? 'mph' : 'km/h') + ' ' + compass(c.wind_direction_10m)],
       ['Precipitation', c.precipitation + ' ' + (u.precipitation === 'inch' ? 'in' : u.precipitation)],
       ['Pressure', r(c.pressure_msl) + ' hPa'],
       ['UV index', dy.uv_index_max[0] != null ? dy.uv_index_max[0].toFixed(1) : '—'],
